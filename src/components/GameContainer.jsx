@@ -22,12 +22,39 @@ const GameContainer = () => {
     const [score, setScore] = useState(0);
     const [charList, setCharList] = useState(initialList);
 
+    const handleClick = (name) => {
+        const index = charList.findIndex(elem => elem.name === name);
+        const oldList = structuredClone(charList);
+        if(!charList[index].clicked){
+            oldList[index].clicked = true;
+            shuffle(oldList);
+            setCharList(oldList);
+            setScore(score+1); 
+        }
+        else {
+            setScore(0);
+            shuffle(initialList);
+            setCharList(initialList);
+        }
+    }
+
+    //Durstenfeld shuffle
+    const shuffle = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
     return (
         <div className="">
             <div className="h-full w-3/4 mx-auto m-0 grow grid grid-cols-4">
+                <div className="bg-blue-900 absolute top-32 right-0 w-36 h-16 text-white text-xl px-1">
+                    <p>Score: {score}</p>
+
+                </div>
                 {
                    charList?.map((elem, index)=> {
-                       return <CharacterCard name={elem.name} clicked={elem.clicked} image={elem.image} key={index} />
+                       return <CharacterCard name={elem.name} image={elem.image} key={index} handleClick={handleClick} />
                    }) 
                 }
             </div>
