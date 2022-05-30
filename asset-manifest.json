@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.0dbca065.css",
+    "main.js": "/memory-card-game/static/js/main.6dd6274a.js",
+    "static/media/ace.jpg": "/memory-card-game/static/media/ace.67516a8118c99f76b27c.jpg",
+    "static/media/usopp.jpg": "/memory-card-game/static/media/usopp.00181445c41beccae59a.jpg",
+    "static/media/franky.jpg": "/memory-card-game/static/media/franky.a5433405cbf708e1a89b.jpg",
+    "static/media/shanks.jpg": "/memory-card-game/static/media/shanks.906648a92a995fef2a27.jpg",
+    "static/media/jinbei.jpg": "/memory-card-game/static/media/jinbei.ce46e06aad552319129d.jpg",
+    "static/media/garp.jpg": "/memory-card-game/static/media/garp.8f8eb72ae5a544a950d7.jpg",
+    "static/media/zoro.jpg": "/memory-card-game/static/media/zoro.43f544daa810f785819e.jpg",
+    "static/media/hancock.jpg": "/memory-card-game/static/media/hancock.2003652ee7762ae59a10.jpg",
+    "static/media/robin.jpg": "/memory-card-game/static/media/robin.44dfe5ca47e48796bd2a.jpg",
+    "static/media/mihawk.jpg": "/memory-card-game/static/media/mihawk.540dcb711c0bd9906c59.jpg",
+    "static/media/roger.jpg": "/memory-card-game/static/media/roger.556ad02d9976772fff23.jpg",
+    "static/media/brook.jpg": "/memory-card-game/static/media/brook.85527a8f237827dcceda.jpg",
+    "static/media/nami.jpg": "/memory-card-game/static/media/nami.0ef44b915439c7f067ce.jpg",
+    "static/media/sanji.jpg": "/memory-card-game/static/media/sanji.1a2e621b64dea580e189.jpg",
+    "static/media/logo.png": "/memory-card-game/static/media/logo.f1e4f0870d5b898260ea.png",
+    "static/media/chopper.jpg": "/memory-card-game/static/media/chopper.92f40c27444fbad75191.jpg",
+    "static/media/luffy.jpg": "/memory-card-game/static/media/luffy.21602e0b7fe7d12cbe8e.jpg",
+    "index.html": "/memory-card-game/index.html",
+    "main.0dbca065.css.map": "/memory-card-game/static/css/main.0dbca065.css.map",
+    "main.6dd6274a.js.map": "/memory-card-game/static/js/main.6dd6274a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dbca065.css",
+    "static/js/main.6dd6274a.js"
+  ]
+}
