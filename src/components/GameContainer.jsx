@@ -48,7 +48,7 @@ const GameContainer = () => {
     return (
         <div className="">
             <div className="h-full w-3/4 mx-auto m-0 grow grid grid-cols-4">
-                <div className="bg-blue-900 absolute top-32 right-0 w-36 h-16 text-white text-xl px-1">
+                <div className="bg-blue-900 absolute top-32 right-0 w-36 h-16 rounded-bl-lg text-white text-xl px-1.5">
                     <p>Score: {score}</p>
 
                 </div>
