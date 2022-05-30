@@ -15,12 +15,24 @@ import mihawk from "../assets/mihawk.jpg";
 import shanks from "../assets/shanks.jpg";
 import garp from "../assets/garp.jpg";
 import roger from "../assets/roger.jpg";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 
 const GameContainer = () => {
     const [score, setScore] = useState(0);
+    const [globalScore, setGlobalScore] = useState(0);
     const [charList, setCharList] = useState(initialList);
+    
+    useEffect(() => {
+        if(!localStorage.getItem('score')){
+            localStorage.setItem('score', score);
+        }
+        else{
+            setGlobalScore(localStorage.getItem('score'));
+        }
+    }, []);
+
+
 
     const handleClick = (name) => {
         const index = charList.findIndex(elem => elem.name === name);
@@ -29,7 +41,11 @@ const GameContainer = () => {
             oldList[index].clicked = true;
             shuffle(oldList);
             setCharList(oldList);
-            setScore(score+1); 
+            setScore(score+1);
+            if(score+1 > globalScore){
+                setGlobalScore(score+1);
+                localStorage.setItem('score', score+1);
+            }
         }
         else {
             setScore(0);
@@ -50,7 +66,7 @@ const GameContainer = () => {
             <div className="h-full w-3/4 mx-auto m-0 grow grid grid-cols-4">
                 <div className="bg-blue-900 absolute top-32 right-0 w-36 h-16 rounded-bl-lg text-white text-xl px-1.5">
                     <p>Score: {score}</p>
-
+                    <p>Best Score: {globalScore}</p>
                 </div>
                 {
                    charList?.map((elem, index)=> {
